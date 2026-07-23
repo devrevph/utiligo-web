@@ -1,65 +1,147 @@
-import Image from "next/image";
+import { getServices, metaForService } from "@/lib/services";
+import { FlameIcon, ShirtIcon, StorefrontIcon, TrashIcon, WaterDropIcon } from "@/components/icons";
 
-export default function Home() {
+const ICONS = {
+  water: WaterDropIcon,
+  flame: FlameIcon,
+  shirt: ShirtIcon,
+  trash: TrashIcon,
+  store: StorefrontIcon,
+};
+
+const STEPS = [
+  {
+    n: "01",
+    title: "Pick a service",
+    body: "Water, gas, laundry pickup, or garbage collection — browse stations near your address.",
+  },
+  {
+    n: "02",
+    title: "A station accepts",
+    body: "The nearest verified station confirms your order and gets it ready.",
+  },
+  {
+    n: "03",
+    title: "It arrives by motorcycle",
+    body: "Track the status as your order is delivered straight to your door.",
+  },
+];
+
+export default async function Home() {
+  const services = await getServices();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)] text-white">
+        <svg
+          className="pointer-events-none absolute inset-x-0 bottom-0 w-full opacity-40"
+          viewBox="0 0 1200 200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            id="route"
+            d="M -20 160 C 200 160, 260 60, 460 90 S 760 190, 980 80 S 1180 40, 1240 60"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeDasharray="2 14"
+            strokeLinecap="round"
+          />
+          <circle r="5" fill="white" className="route-dot">
+            <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#route" />
+            </animateMotion>
+          </circle>
+        </svg>
+
+        <div className="relative mx-auto max-w-5xl px-6 pt-20 pb-28 sm:pt-28 sm:pb-36">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70 mb-5">
+            Local delivery &middot; Philippines
+          </p>
+          <h1 className="font-display font-extrabold uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl text-balance max-w-3xl">
+            Everyday errands,
+            <br />
+            delivered by motorcycle
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-7 max-w-lg text-lg text-white/85">
+            Utiligo connects you with water refill, gas, laundry, and garbage
+            collection stations in your neighborhood — order in a few taps,
+            track it in real time.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="services" className="mx-auto max-w-5xl px-6 py-20 sm:py-24 scroll-mt-16">
+        <div className="max-w-xl mb-12">
+          <p className="font-mono text-xs uppercase tracking-[0.15em] text-accent mb-3">
+            What you can order
+          </p>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl tracking-tight text-balance">
+            Four everyday services, one app
+          </h2>
         </div>
-      </main>
-    </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          {(services.length > 0
+            ? services
+            : FALLBACK_SERVICES
+          ).map((service) => {
+            const meta = metaForService(service.title);
+            const Icon = ICONS[meta.icon];
+            return (
+              <article
+                key={service.id}
+                className="rounded-2xl border border-border bg-surface p-7 transition-colors hover:border-border-strong"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-tint text-accent">
+                  <Icon className="h-5.5 w-5.5" />
+                </span>
+                <h3 className="mt-5 font-display font-bold text-xl tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted">
+                  {meta.tagline}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+          <div className="max-w-xl mb-12">
+            <p className="font-mono text-xs uppercase tracking-[0.15em] text-accent mb-3">
+              How it works
+            </p>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl tracking-tight text-balance">
+              From order to doorstep
+            </h2>
+          </div>
+
+          <div className="grid gap-10 sm:grid-cols-3">
+            {STEPS.map((step) => (
+              <div key={step.n}>
+                <span className="font-mono text-sm text-accent">{step.n}</span>
+                <h3 className="mt-3 font-display font-bold text-lg tracking-tight">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted">
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
+
+const FALLBACK_SERVICES = [
+  { id: 1, title: "Mineral Water", description: null },
+  { id: 2, title: "Gas for Stoves", description: null },
+  { id: 3, title: "Laundry Pickup", description: null },
+  { id: 4, title: "Garbage Collection", description: null },
+];
