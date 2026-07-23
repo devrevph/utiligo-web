@@ -63,6 +63,9 @@ export default function RootLayout({
               <Link href="/privacy" className="hover:text-ink transition-colors">
                 Privacy Policy
               </Link>
+              <Link href="/delete-account" className="hover:text-ink transition-colors">
+                Delete Account
+              </Link>
               <span className="font-mono text-xs">&copy; 2026</span>
             </div>
           </div>
