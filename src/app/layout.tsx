@@ -44,6 +44,12 @@ export default function RootLayout({
               <Link href="/#services" className="text-muted hover:text-ink transition-colors">
                 Services
               </Link>
+              <Link href="/#features" className="text-muted hover:text-ink transition-colors">
+                Features
+              </Link>
+              <Link href="/#pricing" className="text-muted hover:text-ink transition-colors">
+                Pricing
+              </Link>
               <Link href="/privacy" className="text-muted hover:text-ink transition-colors">
                 Privacy
               </Link>
