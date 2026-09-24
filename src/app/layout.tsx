@@ -19,7 +19,7 @@ const publicSans = Public_Sans({
 export const metadata: Metadata = {
   title: "Utiligo — Everyday errands, delivered",
   description:
-    "Order water refills, gas, laundry pickup, and garbage collection from local stations near you — delivered by motorcycle.",
+    "Order water refills, gas, laundry pickup, and garbage collection from local merchants near you — delivered by motorcycle.",
 };
 
 export default function RootLayout({

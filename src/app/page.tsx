@@ -26,12 +26,12 @@ const STEPS = [
   {
     n: "01",
     title: "Pick a service",
-    body: "Water, gas, laundry pickup, or garbage collection — browse stations near your address.",
+    body: "Water, gas, laundry pickup, or garbage collection — browse merchants near your address.",
   },
   {
     n: "02",
-    title: "A station accepts",
-    body: "The nearest verified station confirms your order and gets it ready.",
+    title: "A merchant accepts",
+    body: "The nearest verified merchant confirms your order and gets it ready.",
   },
   {
     n: "03",
@@ -46,8 +46,8 @@ const FEATURE_GROUPS = [
     body: "Everything you need to order and track everyday errands.",
     items: [
       "Order water refills, LPG gas, laundry pickup, or garbage collection",
-      "Browse stations near you, sorted and filtered by distance",
-      "Choose door-to-door delivery or pickup at the station",
+      "Browse merchants near you, sorted and filtered by distance",
+      "Choose door-to-door delivery or pickup at the merchant",
       "Pay with cash or GCash",
       "Photo upload for your container on refill orders",
       "Save your address, or pin a delivery spot on the map",
@@ -58,10 +58,10 @@ const FEATURE_GROUPS = [
   },
   {
     title: "For businesses",
-    body: "Run your water, gas, laundry, or garbage station from the same app.",
+    body: "Run your water, gas, laundry, or garbage merchant from the same app.",
     items: [
       "Flip on Business Mode from your own account — no separate app to install",
-      "Register your station with location, contact info, and category",
+      "Register your merchant with location, contact info, and category",
       "Get verified with a simple document upload flow",
       "Orders and revenue dashboard with selectable date ranges",
       "Accept or reject incoming orders in one tap",
@@ -72,7 +72,7 @@ const FEATURE_GROUPS = [
   },
   {
     title: "For delivery",
-    body: "No separate rider app — your station handles delivery too.",
+    body: "No separate rider app — your merchant handles delivery too.",
     items: [
       "Every accepted order lands in one delivery queue",
       "Turn-by-turn directions to each stop",
@@ -168,7 +168,7 @@ export default async function Home() {
             </h1>
             <p className="mt-7 max-w-lg text-lg text-white/85">
               Utiligo connects you with water refill, gas, laundry, and garbage
-              collection stations in your neighborhood — order in a few taps,
+              collection merchants in your neighborhood — order in a few taps,
               track it in real time.
             </p>
             <DownloadButtons tone="onDark" className="mt-9" />
@@ -178,7 +178,7 @@ export default async function Home() {
             <div className="absolute -left-10 top-2 w-[58%] -rotate-12 overflow-hidden rounded-[1.75rem] border-4 border-white/15 shadow-2xl">
               <Image
                 src={heroDashboard}
-                alt="Utiligo business dashboard showing a gas station's orders and revenue"
+                alt="Utiligo business dashboard showing a gas merchant's orders and revenue"
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 10rem, 8rem"
               />
@@ -186,7 +186,7 @@ export default async function Home() {
             <div className="absolute -right-8 top-12 w-[64%] rotate-6 overflow-hidden rounded-[1.75rem] border-4 border-white/25 shadow-2xl">
               <Image
                 src={heroAnalytics}
-                alt="Utiligo revenue and order analytics chart for a service station"
+                alt="Utiligo revenue and order analytics chart for a service merchant"
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 11rem, 9rem"
               />
@@ -255,7 +255,7 @@ export default async function Home() {
                 Other delivery platforms make you juggle three different apps —
                 one for customers, one for merchants, one for riders. Utiligo
                 is a single app: order as a customer, flip on Business Mode to
-                run your station, and handle delivery from the same account —
+                run your merchant, and handle delivery from the same account —
                 no extra downloads, no extra logins.
               </p>
             </div>
@@ -265,12 +265,12 @@ export default async function Home() {
                   As a customer
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">
-                  Order from nearby stations and track delivery in real time.
+                  Order from nearby merchants and track delivery in real time.
                 </p>
               </div>
               <div className="rounded-2xl border border-border p-6">
                 <h3 className="font-display font-bold text-lg tracking-tight">
-                  As a station owner
+                  As a merchant owner
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">
                   Accept orders, manage your catalog, and see your dashboard.
@@ -282,7 +282,7 @@ export default async function Home() {
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">
                   Build a multi-stop route and mark orders delivered — right
-                  from your station&apos;s own account.
+                  from your merchant&apos;s own account.
                 </p>
               </div>
             </div>
@@ -371,12 +371,12 @@ export default async function Home() {
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-muted">
             We&apos;re still early, so there&apos;s no pricing plan yet — ordering
-            as a customer and running a station are both free.
+            as a customer and running a merchant are both free.
           </p>
           <ul className="mt-6 space-y-3">
             {[
               "No fees to order",
-              "No fees to register or run a station",
+              "No fees to register or run a merchant",
               "No commission on deliveries",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-[14px] leading-relaxed">

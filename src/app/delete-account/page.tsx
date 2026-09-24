@@ -81,13 +81,13 @@ export default function DeleteAccountPage() {
           <li>Your profile: name, email, mobile number, and delivery address</li>
           <li>Your push notification token</li>
           <li>
-            If you&rsquo;re a station owner: your station, its product
+            If you&rsquo;re a merchant owner: your merchant, its product
             listings, and its order history
           </li>
           <li>Your sign-in credentials, removed from Firebase entirely</li>
         </ul>
         <p className="mt-4 text-muted">
-          Completed order records tied to a station&rsquo;s accounting
+          Completed order records tied to a merchant&rsquo;s accounting
           history may be retained in de-identified form (no longer linked to
           you) after your account is deleted. See our{" "}
           <a href="/privacy" className="text-accent hover:text-accent-strong">
