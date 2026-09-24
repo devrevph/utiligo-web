@@ -1,6 +1,4 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_UTILIGO_API_BASE_URL ??
-  "https://utiligo-api-production.up.railway.app";
+import { API_BASE_URL } from "./api-base-url";
 
 export type MerchantService = {
   id: number;

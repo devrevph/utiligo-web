@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getServices, metaForService } from "@/lib/services";
 import {
   AppleIcon,
@@ -10,9 +11,9 @@ import {
   TrashIcon,
   WaterDropIcon,
 } from "@/components/icons";
-import heroAccount from "../../public/img/photo_2026-07-28_19-45-12.jpg";
-import heroAnalytics from "../../public/img/photo_2026-07-28_19-45-14.jpg";
-import heroDashboard from "../../public/img/photo_2026-07-28_19-45-16.jpg";
+import heroAccount from "../../../public/img/photo_2026-07-28_19-45-12.jpg";
+import heroAnalytics from "../../../public/img/photo_2026-07-28_19-45-14.jpg";
+import heroDashboard from "../../../public/img/photo_2026-07-28_19-45-16.jpg";
 
 const ICONS = {
   water: WaterDropIcon,
@@ -171,7 +172,21 @@ export default async function Home() {
               collection merchants in your neighborhood — order in a few taps,
               track it in real time.
             </p>
-            <DownloadButtons tone="onDark" className="mt-9" />
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                href="/signup"
+                className="inline-flex items-center rounded-xl bg-white px-5 py-3 text-[15px] font-semibold text-[#1d4ed8] shadow-sm transition-colors hover:bg-white/90"
+              >
+                Open the web app
+              </Link>
+              <Link
+                href="/login"
+                className="inline-flex items-center rounded-xl border border-white/40 px-5 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                Sign in
+              </Link>
+            </div>
+            <DownloadButtons tone="onDark" className="mt-6" />
           </div>
 
           <div className="relative mx-auto w-full max-w-[17rem] sm:max-w-[19rem] lg:mx-0 lg:justify-self-end">
