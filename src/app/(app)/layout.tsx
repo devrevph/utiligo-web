@@ -3,14 +3,23 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { AppShell } from "@/components/app/app-shell";
+import { ConfigError } from "@/components/app/config-error";
 import { BoltMark } from "@/components/icons";
 import { ConfirmHost, Toaster, VerifyEmailPrompt } from "@/components/ui/feedback";
 import { Button, ButtonLink, Spinner } from "@/components/ui/primitives";
 import { useNotificationsStream } from "@/lib/hooks/use-notifications-stream";
+import { missingFirebaseConfig } from "@/lib/firebase";
 import { startAuthListener, useAuthStore } from "@/lib/stores/auth";
 import { useMerchantStore } from "@/lib/stores/merchant";
 
+const MISSING_CONFIG = missingFirebaseConfig();
+
 export default function AppLayout({ children }: { children: React.ReactNode }) {
+  if (MISSING_CONFIG.length > 0) return <ConfigError missing={MISSING_CONFIG} />;
+  return <AppLayoutInner>{children}</AppLayoutInner>;
+}
+
+function AppLayoutInner({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const status = useAuthStore((s) => s.status);
