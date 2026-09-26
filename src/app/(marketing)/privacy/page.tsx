@@ -113,7 +113,7 @@ export default function PrivacyPage() {
                 <tr>
                   <Td>Order information</Td>
                   <Td>
-                    Service and station ordered from, order type, quantity,
+                    Service and merchant ordered from, order type, quantity,
                     delivery notes, payment status and method
                   </Td>
                   <Td>When you place, receive, or pay for an order</Td>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
                     Business name, contact numbers, business address, and
                     services offered
                   </Td>
-                  <Td>Only if you register as a station owner</Td>
+                  <Td>Only if you register as a merchant owner</Td>
                 </tr>
               </tbody>
             </table>
@@ -155,16 +155,16 @@ export default function PrivacyPage() {
               authenticate you, and show your profile and order history.
             </li>
             <li>
-              <strong className="text-ink">To connect you with nearby stations</strong>{" "}
+              <strong className="text-ink">To connect you with nearby merchants</strong>{" "}
               — your delivery coordinates are compared against each
-              station&rsquo;s address to show distance and an estimated
+              merchant&rsquo;s address to show distance and an estimated
               motorcycle delivery time, and to let you filter listings by
               distance.
             </li>
             <li>
               <strong className="text-ink">To fulfill orders</strong> — your
               delivery address and order details are shared with the
-              specific station you order from, so they can accept, prepare,
+              specific merchant you order from, so they can accept, prepare,
               and deliver it.
             </li>
             <li>
@@ -190,10 +190,10 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-3 text-muted list-disc pl-5 marker:text-accent">
             <li>
-              <strong className="text-ink">With the station you order from</strong>{" "}
+              <strong className="text-ink">With the merchant you order from</strong>{" "}
               — your name, mobile number, and delivery address are visible
-              to that station&rsquo;s owner so they can complete your order.
-              Station owners cannot see your information unless you place
+              to that merchant&rsquo;s owner so they can complete your order.
+              Merchant owners cannot see your information unless you place
               an order with them.
             </li>
             <li>With service providers we rely on to run the app:</li>
@@ -242,10 +242,10 @@ export default function PrivacyPage() {
             We keep your account and order information for as long as your
             account is active, so you can view your order history and
             re-order easily. If you delete your account, your profile,
-            address, push token, and (if applicable) your station and its
+            address, push token, and (if applicable) your merchant and its
             listings are permanently removed from our database, and your
             sign-in credentials are deleted from Firebase. Completed order
-            records tied to a station&rsquo;s history may be retained in
+            records tied to a merchant&rsquo;s history may be retained in
             de-identified form for accounting purposes.
           </p>
         </section>

@@ -3,6 +3,7 @@
 :root {
   --bg: #f8fafc;
   --surface: #ffffff;
+  --surface-2: #f1f5f9;
   --ink: #1e293b;
   --muted: #64748b;
   --border: #e2e8f0;
@@ -10,14 +11,35 @@
   --accent: #2563eb;
   --accent-strong: #1d4ed8;
   --accent-tint: #eff6ff;
+  --on-accent: #ffffff;
   --brand-a: #3b82f6;
   --brand-b: #4f46e5;
+
+  --success: #15803d;
+  --success-tint: #f0fdf4;
+  --warning: #c2410c;
+  --warning-tint: #fff7ed;
+  --danger: #dc2626;
+  --danger-tint: #fef2f2;
+
+  /* Per-service accents (fills keep ≥4.5:1 against --on-accent). */
+  --water: #2563eb;
+  --water-tint: #eff6ff;
+  --gas: #c2410c;
+  --gas-tint: #fff7ed;
+  --laundry: #9333ea;
+  --laundry-tint: #faf5ff;
+  --garbage: #15803d;
+  --garbage-tint: #f0fdf4;
+  --merchant: #047857;
+  --merchant-tint: #ecfdf5;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0b1220;
     --surface: #121b2e;
+    --surface-2: #17223a;
     --ink: #e2e8f0;
     --muted: #94a3b8;
     --border: #22304a;
@@ -25,14 +47,32 @@
     --accent: #60a5fa;
     --accent-strong: #93c5fd;
     --accent-tint: #14213b;
-    --brand-a: #3b82f6;
-    --brand-b: #4f46e5;
+    --on-accent: #0b1220;
+
+    --success: #4ade80;
+    --success-tint: #0f2a1c;
+    --warning: #fb923c;
+    --warning-tint: #2d1a0e;
+    --danger: #f87171;
+    --danger-tint: #2d1215;
+
+    --water: #60a5fa;
+    --water-tint: #14213b;
+    --gas: #fb923c;
+    --gas-tint: #2d1a0e;
+    --laundry: #c084fc;
+    --laundry-tint: #241535;
+    --garbage: #4ade80;
+    --garbage-tint: #0f2a1c;
+    --merchant: #34d399;
+    --merchant-tint: #0d2a22;
   }
 }
 
 :root[data-theme="dark"] {
   --bg: #0b1220;
   --surface: #121b2e;
+  --surface-2: #17223a;
   --ink: #e2e8f0;
   --muted: #94a3b8;
   --border: #22304a;
@@ -40,23 +80,31 @@
   --accent: #60a5fa;
   --accent-strong: #93c5fd;
   --accent-tint: #14213b;
-}
+  --on-accent: #0b1220;
 
-:root[data-theme="light"] {
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --ink: #1e293b;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --accent-tint: #eff6ff;
+  --success: #4ade80;
+  --success-tint: #0f2a1c;
+  --warning: #fb923c;
+  --warning-tint: #2d1a0e;
+  --danger: #f87171;
+  --danger-tint: #2d1215;
+
+  --water: #60a5fa;
+  --water-tint: #14213b;
+  --gas: #fb923c;
+  --gas-tint: #2d1a0e;
+  --laundry: #c084fc;
+  --laundry-tint: #241535;
+  --garbage: #4ade80;
+  --garbage-tint: #0f2a1c;
+  --merchant: #34d399;
+  --merchant-tint: #0d2a22;
 }
 
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-border: var(--border);
@@ -64,6 +112,15 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-accent-tint: var(--accent-tint);
+  --color-on-accent: var(--on-accent);
+  --color-success: var(--success);
+  --color-success-tint: var(--success-tint);
+  --color-warning: var(--warning);
+  --color-warning-tint: var(--warning-tint);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+  --color-merchant: var(--merchant);
+  --color-merchant-tint: var(--merchant-tint);
   --font-display: var(--font-barlow);
   --font-sans: var(--font-public-sans);
 }
@@ -71,6 +128,17 @@
 body {
   background: var(--bg);
   color: var(--ink);
+}
+
+/* Browsers default fieldsets to min-width: min-content, which lets wide inputs overflow on phones. */
+fieldset {
+  min-width: 0;
+}
+
+/* Leaflet panes sit at z-index 400+; keep the map below app dialogs. */
+.leaflet-container {
+  font: inherit;
+  z-index: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,15 +1,13 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_UTILIGO_API_BASE_URL ??
-  "https://utiligo-api-production.up.railway.app";
+import { API_BASE_URL } from "./api-base-url";
 
-export type StationService = {
+export type MerchantService = {
   id: number;
   title: string;
   description: string | null;
 };
 
-// Matches the same regexes utiligo-app uses (isWaterStationService,
-// isGasStationService, etc.) so both surfaces categorize services identically.
+// Matches the same regexes utiligo-app uses (isWaterMerchantService,
+// isGasMerchantService, etc.) so both surfaces categorize services identically.
 export type ServiceMeta = {
   icon: "water" | "flame" | "shirt" | "trash" | "store";
   tagline: string;
@@ -36,16 +34,16 @@ const SERVICE_META: { test: RegExp; meta: ServiceMeta }[] = [
 
 const FALLBACK_META: ServiceMeta = {
   icon: "store",
-  tagline: "Order from verified local stations near you.",
+  tagline: "Order from verified local merchants near you.",
 };
 
 export function metaForService(title: string): ServiceMeta {
   return SERVICE_META.find((s) => s.test.test(title))?.meta ?? FALLBACK_META;
 }
 
-export async function getServices(): Promise<StationService[]> {
+export async function getServices(): Promise<MerchantService[]> {
   try {
-    const res = await fetch(`${API_BASE_URL}/stations/services`, {
+    const res = await fetch(`${API_BASE_URL}/merchants/services`, {
       next: { revalidate: 3600 },
     });
     if (!res.ok) return [];
