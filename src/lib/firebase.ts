@@ -11,6 +11,25 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+const ENV_NAMES: Record<keyof typeof firebaseConfig, string> = {
+  apiKey: "NEXT_PUBLIC_FIREBASE_API_KEY",
+  authDomain: "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+  projectId: "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+  storageBucket: "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET",
+  messagingSenderId: "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+  appId: "NEXT_PUBLIC_FIREBASE_APP_ID",
+};
+
+/**
+ * Env vars that were empty when this bundle was built. NEXT_PUBLIC_* values are
+ * inlined at build time, so fixing them on the host requires a redeploy.
+ */
+export function missingFirebaseConfig(): string[] {
+  return (Object.keys(firebaseConfig) as Array<keyof typeof firebaseConfig>)
+    .filter((k) => !firebaseConfig[k]?.trim())
+    .map((k) => ENV_NAMES[k]);
+}
+
 let app: FirebaseApp | undefined;
 let authInstance: Auth | undefined;
 let storageInstance: FirebaseStorage | undefined;

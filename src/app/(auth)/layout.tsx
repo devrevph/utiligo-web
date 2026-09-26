@@ -3,12 +3,21 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { ConfigError } from "@/components/app/config-error";
 import { BoltMark } from "@/components/icons";
 import { Toaster } from "@/components/ui/feedback";
 import { nextPathFromLocation } from "@/lib/navigation";
+import { missingFirebaseConfig } from "@/lib/firebase";
 import { startAuthListener, useAuthStore } from "@/lib/stores/auth";
 
+const MISSING_CONFIG = missingFirebaseConfig();
+
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  if (MISSING_CONFIG.length > 0) return <ConfigError missing={MISSING_CONFIG} />;
+  return <AuthLayoutInner>{children}</AuthLayoutInner>;
+}
+
+function AuthLayoutInner({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const status = useAuthStore((s) => s.status);
   const hasProfile = useAuthStore((s) => !!s.user);
