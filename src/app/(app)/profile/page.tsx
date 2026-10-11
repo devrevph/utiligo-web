@@ -71,7 +71,7 @@ function ProfileForm({ user }: { user: User }) {
 
   return (
     <>
-      <title>Profile · Utiligo</title>
+      <title>Profile · UtiliGo</title>
       <PageHeader title="Profile" subtitle="Your account details and delivery address." />
       <form onSubmit={save} className="grid gap-6 lg:grid-cols-2">
         <Card className="flex flex-col gap-4">

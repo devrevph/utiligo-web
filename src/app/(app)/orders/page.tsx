@@ -22,7 +22,7 @@ export default function OrdersPage() {
 
   return (
     <>
-      <title>My orders · Utiligo</title>
+      <title>My orders · UtiliGo</title>
       <PageHeader title="My orders" subtitle="All requests and purchases you've placed." />
       {error ? (
         <Card>

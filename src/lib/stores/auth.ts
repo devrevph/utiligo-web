@@ -50,7 +50,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       set({
         profileError:
           e instanceof ApiError && e.status === 404
-            ? "We couldn't find your Utiligo profile."
+            ? "We couldn't find your UtiliGo profile."
             : "We couldn't load your profile. Check your connection and try again.",
       });
     }

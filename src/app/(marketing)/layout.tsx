@@ -10,7 +10,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
             <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)]">
               <BoltMark className="h-4.5 w-4.5 text-white" />
             </span>
-            <span className="font-display text-xl font-bold tracking-tight">Utiligo</span>
+            <span className="font-display text-xl font-bold tracking-tight">UtiliGo</span>
           </Link>
           <nav className="flex items-center gap-6 text-sm font-medium">
             <Link href="/#services" className="hidden text-muted hover:text-ink transition-colors md:inline">
@@ -41,7 +41,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
           <div className="flex items-center gap-2">
             <BoltMark className="h-3.5 w-3.5 text-accent" />
-            <span>Utiligo</span>
+            <span>UtiliGo</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-ink transition-colors">

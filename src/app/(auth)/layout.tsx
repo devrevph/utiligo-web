@@ -39,7 +39,7 @@ function AuthLayoutInner({ children }: { children: React.ReactNode }) {
           <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-white/15">
             <BoltMark className="h-5 w-5 text-white" />
           </span>
-          <span className="font-display text-2xl font-bold tracking-tight">Utiligo</span>
+          <span className="font-display text-2xl font-bold tracking-tight">UtiliGo</span>
         </Link>
         <div>
           <p className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight">
@@ -59,7 +59,7 @@ function AuthLayoutInner({ children }: { children: React.ReactNode }) {
           <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)]">
             <BoltMark className="h-4.5 w-4.5 text-white" />
           </span>
-          <span className="font-display text-xl font-bold tracking-tight">Utiligo</span>
+          <span className="font-display text-xl font-bold tracking-tight">UtiliGo</span>
         </Link>
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center">{children}</div>
       </main>

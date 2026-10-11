@@ -100,7 +100,7 @@ export default function SignupPage() {
 
   return (
     <>
-      <title>Create account · Utiligo</title>
+      <title>Create account · UtiliGo</title>
       <h1 className="font-display text-4xl font-bold tracking-tight">Create your account</h1>
       <p className="mt-2 text-muted">Order from local merchants, or register your own business later.</p>
 

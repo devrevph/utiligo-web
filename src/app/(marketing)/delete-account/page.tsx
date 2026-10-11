@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Delete Your Account — Utiligo",
+  title: "Delete Your Account — UtiliGo",
   description:
-    "How to permanently delete your Utiligo account and data, in-app or by request.",
+    "How to permanently delete your UtiliGo account and data, in-app or by request.",
 };
 
 function Step({ n, children }: { n: number; children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export default function DeleteAccountPage() {
         Delete your account
       </h1>
       <p className="mt-5 max-w-xl text-lg text-muted">
-        You can permanently delete your Utiligo account and data at any time,
+        You can permanently delete your UtiliGo account and data at any time,
         either from within the app or by requesting it here.
       </p>
 
@@ -39,7 +39,7 @@ export default function DeleteAccountPage() {
           This is instant and doesn&rsquo;t require waiting on us.
         </p>
         <ol className="mt-6 space-y-4">
-          <Step n={1}>Open the Utiligo app and log in.</Step>
+          <Step n={1}>Open the UtiliGo app and log in.</Step>
           <Step n={2}>
             Tap the menu icon on the home screen, then go to{" "}
             <strong className="text-ink">Settings</strong>.
@@ -61,7 +61,7 @@ export default function DeleteAccountPage() {
           for you.
         </p>
         <a
-          href="mailto:jayanton.roblico@gmail.com?subject=Delete%20my%20Utiligo%20account"
+          href="mailto:jayanton.roblico@gmail.com?subject=Delete%20my%20UtiliGo%20account"
           className="mt-5 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-strong transition-colors"
         >
           jayanton.roblico@gmail.com

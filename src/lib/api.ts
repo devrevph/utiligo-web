@@ -52,7 +52,7 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch {
-    throw new ApiError("Can't reach Utiligo right now. Check your connection and try again.", 0);
+    throw new ApiError("Can't reach UtiliGo right now. Check your connection and try again.", 0);
   }
 
   if (!res.ok) {

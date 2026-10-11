@@ -64,7 +64,7 @@ export default function DeliveryPage() {
 
   return (
     <>
-      <title>Deliveries · Business · Utiligo</title>
+      <title>Deliveries · Business · UtiliGo</title>
       <p className="mb-5 max-w-2xl text-sm text-muted">
         Accepted water, gas, laundry-return, and garbage pickup orders. Open directions for each stop, then mark it delivered.
       </p>

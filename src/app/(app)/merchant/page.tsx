@@ -30,7 +30,7 @@ export default function MerchantDashboardPage() {
 
   return (
     <>
-      <title>Business dashboard · Utiligo</title>
+      <title>Business dashboard · UtiliGo</title>
 
       {!verified ? (
         <Link

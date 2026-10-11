@@ -54,7 +54,7 @@ export default function ServiceMerchantsPage() {
 
   return (
     <>
-      <title>{`${service.name} · Utiligo`}</title>
+      <title>{`${service.name} · UtiliGo`}</title>
       <PageHeader title={service.name} subtitle={service.listSubtitle} back={{ href: "/home", label: "Home" }} />
 
       {hasLocation ? (

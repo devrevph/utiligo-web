@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Utiligo",
+  title: "Privacy Policy — UtiliGo",
   description:
-    "How Utiligo collects, uses, and shares information in the water refill, gas, laundry, and garbage collection delivery app.",
+    "How UtiliGo collects, uses, and shares information in the water refill, gas, laundry, and garbage collection delivery app.",
 };
 
 const TOC = [
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
         Privacy Policy
       </h1>
       <p className="mt-5 max-w-xl text-lg text-muted">
-        Utiligo connects you with nearby water refill, gas, laundry pickup, and
+        UtiliGo connects you with nearby water refill, gas, laundry pickup, and
         garbage collection businesses for motorcycle delivery. This page
         explains what information we collect to make that work, how we use
         it, and the choices you have.
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
           </div>
           <div className="mt-4 rounded-lg border border-border border-l-[3px] border-l-accent bg-accent-tint px-5 py-4 text-[15px]">
             We may also disclose information if required by law, or to
-            protect the rights, safety, or property of Utiligo, our users, or
+            protect the rights, safety, or property of UtiliGo, our users, or
             the public.
           </div>
         </section>
@@ -286,7 +286,7 @@ export default function PrivacyPage() {
             Children&rsquo;s privacy
           </h2>
           <p className="mt-4 text-muted">
-            Utiligo is not directed at children under 13, and we do not
+            UtiliGo is not directed at children under 13, and we do not
             knowingly collect information from them. If you believe a child
             has provided us with personal information, contact us and we
             will remove it.
@@ -300,7 +300,7 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-4 text-muted">
             Passwords are handled entirely by Firebase Authentication using
-            industry-standard hashing — Utiligo never sees or stores your
+            industry-standard hashing — UtiliGo never sees or stores your
             password. Data is transmitted between the app and our servers
             over encrypted (HTTPS) connections, and database access is
             restricted to our application infrastructure.

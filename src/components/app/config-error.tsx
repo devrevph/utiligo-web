@@ -7,7 +7,7 @@ export function ConfigError({ missing }: { missing: string[] }) {
       <span className="mb-6 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)]">
         <BoltMark className="h-6 w-6 text-white" />
       </span>
-      <h1 className="font-display text-3xl font-bold tracking-tight">Utiligo isn&apos;t set up yet</h1>
+      <h1 className="font-display text-3xl font-bold tracking-tight">UtiliGo isn&apos;t set up yet</h1>
       <p className="mt-2 max-w-md text-muted">
         This deployment was built without its sign-in settings. Add these environment variables to the host, then redeploy:
       </p>

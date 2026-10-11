@@ -51,7 +51,7 @@ export default function EditProductPage() {
 
   return (
     <>
-      <title>Edit product · Business · Utiligo</title>
+      <title>Edit product · Business · UtiliGo</title>
       <PageHeader title={product?.name ?? "Edit product"} back={{ href: "/merchant/products", label: "Products" }} />
       {loadError ? (
         <Card>

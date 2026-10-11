@@ -76,7 +76,7 @@ export default function VerifyEmailPage() {
 
   return (
     <>
-      <title>Verify email · Utiligo</title>
+      <title>Verify email · UtiliGo</title>
       <Card className="mx-auto mt-4 flex max-w-lg flex-col items-center text-center sm:p-10">
         <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent-tint text-accent">
           <Icon name={emailVerified ? "check-circle" : "mail"} className="h-7 w-7" />
