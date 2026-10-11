@@ -49,7 +49,7 @@ export default function MerchantShopPage() {
 
   return (
     <>
-      <title>{`${merchant.name} · Utiligo`}</title>
+      <title>{`${merchant.name} · UtiliGo`}</title>
       <PageHeader title={merchant.name} subtitle={service.merchantSubtitle} back={back} />
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">

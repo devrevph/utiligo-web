@@ -168,7 +168,7 @@ export default async function Home() {
               delivered to your door
             </h1>
             <p className="mt-7 max-w-lg text-lg text-white/85">
-              Utiligo connects you with water refill, gas, laundry, and garbage
+              UtiliGo connects you with water refill, gas, laundry, and garbage
               collection merchants in your neighborhood — order in a few taps,
               track it in real time.
             </p>
@@ -193,7 +193,7 @@ export default async function Home() {
             <div className="absolute -left-10 top-2 w-[58%] -rotate-12 overflow-hidden rounded-[1.75rem] border-4 border-white/15 shadow-2xl">
               <Image
                 src={heroDashboard}
-                alt="Utiligo business dashboard showing a gas merchant's orders and revenue"
+                alt="UtiliGo business dashboard showing a gas merchant's orders and revenue"
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 10rem, 8rem"
               />
@@ -201,7 +201,7 @@ export default async function Home() {
             <div className="absolute -right-8 top-12 w-[64%] rotate-6 overflow-hidden rounded-[1.75rem] border-4 border-white/25 shadow-2xl">
               <Image
                 src={heroAnalytics}
-                alt="Utiligo revenue and order analytics chart for a service merchant"
+                alt="UtiliGo revenue and order analytics chart for a service merchant"
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 11rem, 9rem"
               />
@@ -209,7 +209,7 @@ export default async function Home() {
             <div className="relative w-[78%] -rotate-3 overflow-hidden rounded-[1.75rem] border-4 border-white/40 shadow-2xl">
               <Image
                 src={heroAccount}
-                alt="Utiligo app home screen showing account details and available services"
+                alt="UtiliGo app home screen showing account details and available services"
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 13rem, 11rem"
                 preload
@@ -268,7 +268,7 @@ export default async function Home() {
               </h2>
               <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-muted">
                 Other delivery platforms make you juggle three different apps —
-                one for customers, one for merchants, one for riders. Utiligo
+                one for customers, one for merchants, one for riders. UtiliGo
                 is a single app: order as a customer, flip on Business Mode to
                 run your merchant, and handle delivery from the same account —
                 no extra downloads, no extra logins.
@@ -406,7 +406,7 @@ export default async function Home() {
       <section className="border-t border-border bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)] text-white">
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24 text-center">
           <h2 className="font-display font-bold text-3xl sm:text-4xl tracking-tight text-balance">
-            Get Utiligo
+            Get UtiliGo
           </h2>
           <p className="mt-4 text-white/85">
             Launching soon on iOS and Android.

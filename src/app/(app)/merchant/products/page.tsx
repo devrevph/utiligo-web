@@ -34,7 +34,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <title>Products · Business · Utiligo</title>
+      <title>Products · Business · UtiliGo</title>
       <div className="mb-5 flex justify-end">{addButton}</div>
       {error ? (
         <Card>

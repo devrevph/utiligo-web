@@ -48,7 +48,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-gradient-to-br from-[var(--brand-a)] to-[var(--brand-b)]">
               <BoltMark className="h-4.5 w-4.5 text-white" />
             </span>
-            <span className="font-display text-xl font-bold tracking-tight">Utiligo</span>
+            <span className="font-display text-xl font-bold tracking-tight">UtiliGo</span>
           </Link>
 
           <nav aria-label="Main" className="ml-4 hidden items-center gap-1 md:flex">

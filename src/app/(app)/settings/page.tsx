@@ -63,7 +63,7 @@ export default function SettingsPage() {
 
   return (
     <>
-      <title>Settings · Utiligo</title>
+      <title>Settings · UtiliGo</title>
       <PageHeader title="Settings" subtitle="Account and business options." back={{ href: "/profile", label: "Profile" }} />
       <div className="flex max-w-2xl flex-col gap-6">
         <section>
@@ -96,7 +96,7 @@ export default function SettingsPage() {
             <div className="flex-1">
               <p className="font-semibold text-ink">Delete account</p>
               <p className="mt-1 text-sm text-muted">
-                Permanently remove your Utiligo profile, order history, and sign-in. If you own a merchant, it&apos;s removed too.
+                Permanently remove your UtiliGo profile, order history, and sign-in. If you own a merchant, it&apos;s removed too.
               </p>
             </div>
             <Button variant="danger" loading={busy === "account"} disabled={busy !== null} onClick={() => void deleteAccount()}>

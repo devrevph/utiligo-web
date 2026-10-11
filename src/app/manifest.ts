@@ -3,8 +3,8 @@ import type { MetadataRoute } from "next";
 // Lets phones "Add to Home Screen" and open the app full-screen, without a store listing.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Utiligo",
-    short_name: "Utiligo",
+    name: "UtiliGo",
+    short_name: "UtiliGo",
     description: "Water refills, LPG, laundry pickup, and garbage collection from merchants near you.",
     start_url: "/home",
     scope: "/",

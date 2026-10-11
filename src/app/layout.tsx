@@ -15,11 +15,11 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Utiligo — Everyday errands, delivered",
+  title: "UtiliGo — Everyday errands, delivered",
   description:
     "Order water refills, gas, laundry pickup, and garbage collection from local merchants near you — delivered by motorcycle.",
-  applicationName: "Utiligo",
-  appleWebApp: { capable: true, title: "Utiligo", statusBarStyle: "default" },
+  applicationName: "UtiliGo",
+  appleWebApp: { capable: true, title: "UtiliGo", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {

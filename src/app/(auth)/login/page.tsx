@@ -41,7 +41,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <title>Sign in · Utiligo</title>
+      <title>Sign in · UtiliGo</title>
       <h1 className="font-display text-4xl font-bold tracking-tight">Welcome back</h1>
       <p className="mt-2 text-muted">Sign in to order from merchants near you or manage your business.</p>
 
@@ -86,7 +86,7 @@ export default function LoginPage() {
       </form>
 
       <p className="mt-8 text-center text-sm text-muted">
-        New to Utiligo?{" "}
+        New to UtiliGo?{" "}
         <Link href="/signup" className="font-semibold text-accent hover:underline">
           Create an account
         </Link>

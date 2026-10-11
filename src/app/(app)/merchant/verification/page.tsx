@@ -69,7 +69,7 @@ export default function VerificationPage() {
 
   return (
     <>
-      <title>Verification · Business · Utiligo</title>
+      <title>Verification · Business · UtiliGo</title>
       <div className={cx("mb-6 flex items-start gap-3 rounded-xl px-4 py-3 text-sm", banner.tone)}>
         <Icon name={banner.icon} className="mt-0.5 h-5 w-5 shrink-0" />
         <p className="font-medium">{banner.text}</p>

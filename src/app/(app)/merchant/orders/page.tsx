@@ -59,7 +59,7 @@ export default function MerchantOrdersPage() {
 
   return (
     <>
-      <title>Orders · Business · Utiligo</title>
+      <title>Orders · Business · UtiliGo</title>
       <div className="mb-5">
         <ChoiceChips
           label="Show"

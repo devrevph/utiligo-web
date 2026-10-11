@@ -100,7 +100,7 @@ export default function RegisterMerchantPage() {
 
   return (
     <>
-      <title>Register a merchant · Utiligo</title>
+      <title>Register a merchant · UtiliGo</title>
       <PageHeader
         title="Register a merchant"
         subtitle="Add your business and start receiving orders from nearby customers."

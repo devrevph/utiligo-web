@@ -29,7 +29,7 @@ export default function HomePage() {
 
   return (
     <>
-      <title>Home · Utiligo</title>
+      <title>Home · UtiliGo</title>
       <div className="mb-8">
         <p className="text-sm font-medium text-muted">Welcome back,</p>
         <h1 className="font-display text-4xl font-bold tracking-tight">

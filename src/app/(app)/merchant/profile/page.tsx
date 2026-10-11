@@ -67,7 +67,7 @@ function BusinessProfileForm({ merchant }: { merchant: MyMerchant }) {
 
   return (
     <>
-      <title>Business profile · Utiligo</title>
+      <title>Business profile · UtiliGo</title>
       <form onSubmit={save} className="grid gap-6 lg:grid-cols-2">
         <div className="flex flex-col gap-6">
           <Card className="flex flex-col gap-4">

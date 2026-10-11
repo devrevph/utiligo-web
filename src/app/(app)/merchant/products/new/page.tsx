@@ -55,7 +55,7 @@ export default function NewProductPage() {
 
   return (
     <>
-      <title>New product · Business · Utiligo</title>
+      <title>New product · Business · UtiliGo</title>
       <PageHeader title="New product" back={{ href: "/merchant/products", label: "Products" }} />
       <ProductForm submitLabel="Save product" onSubmit={(v) => void save(v)} saving={saving} error={error} />
     </>

@@ -33,7 +33,7 @@ export default function ForgotPasswordPage() {
 
   return (
     <>
-      <title>Reset password · Utiligo</title>
+      <title>Reset password · UtiliGo</title>
       <Link href="/login" className="mb-6 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">
         <Icon name="chevron-left" className="h-4 w-4" />
         Back to sign in
